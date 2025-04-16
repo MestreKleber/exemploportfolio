@@ -1,0 +1,74 @@
+body {
+    background-color: #a8a8a8;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: serif;
+    color: #000000;
+    font-size: 2em;
+    text-align: center;
+}
+
+h2{
+    font-family: serif;
+    color: #000000;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+h3{
+    font-family: 'Segoe UI';
+    color: #000000;
+    font-size: 3em;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    height: 20%;
+}
+
+.frame1 {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    display: block;
+    margin: 5em;
+    width: 400px;
+    height: 400px;
+}
+
+.frame2 {
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    display: block;
+    margin: 5em;
+    width: 400px;
+    height: 400px;
+}
+
+.frame3 {
+    position: absolute;
+    top: 900px;
+    left: 10%;
+    display: block;
+    margin: 5em;
+    width: 400px;
+    height: 400px;
+}
+
+.frame4 {
+    position: absolute;
+    top: 900px;
+    right: 10%;
+    display: block;
+    margin: 5em;
+    width: 400px;
+    height: 400px;
+}
+
