@@ -32,43 +32,72 @@ img {
     height: 20%;
 }
 
-.frame1 {
-    position: absolute;
-    top: 60%;
-    left: 10%;
-    display: block;
-    margin: 5em;
-    width: 400px;
-    height: 400px;
+html, body {
+    height: 100%; /* Garante que o HTML e o body ocupem 100% da altura */
+    margin: 0;
+    padding: 0;
 }
 
-.frame2 {
-    position: absolute;
-    top: 60%;
-    right: 10%;
-    display: block;
-    margin: 5em;
-    width: 400px;
-    height: 400px;
+.carousel {
+    height: 60vh; /* Define a altura do carrossel como 70% da altura da viewport */
 }
 
-.frame3 {
-    position: absolute;
-    top: 900px;
-    left: 10%;
-    display: block;
-    margin: 5em;
-    width: 400px;
-    height: 400px;
+.carousel-inner {
+    height: 100%; /* O carrossel ocupará 100% da altura definida no contêiner pai */
 }
 
-.frame4 {
-    position: absolute;
-    top: 900px;
-    right: 10%;
+.carousel-item {
+    height: 100%; /* Garante que cada item do carrossel ocupe 100% da altura do carrossel */
+    display: flex; /* Garante que o conteúdo interno seja flexível */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    opacity: 1; /* Garante que os itens inativos não fiquem transparentes */
+    transition: none; /* Remove transições que podem causar problemas */
+}
+
+.carousel-item iframe {
+    width: 100%; /* O iframe ocupará 100% da largura do carrossel */
+    height: 100%; /* O iframe ocupará 100% da altura do carrossel */
+}
+
+.carousel-item:not(.active) {
+    display: flex; /* Garante que os itens inativos mantenham o layout flexível */
+    visibility: hidden; /* Esconde os itens inativos sem alterar o tamanho */
+    height: 100%; /* Garante que os itens inativos tenham a mesma altura */
+}
+
+iframe {
+    width: 100%; /* O iframe ocupará 100% da largura do carrossel */
+    height: 100%; /* O iframe ocupará 100% da altura do carrossel */
+    border: none; /* Remove a borda do iframe */
+}
+
+.carousel-control-prev, .carousel-control-next {
+    border: 2px solid black; /* Adiciona uma borda preta */
+    border-radius: 50%; /* Torna a borda redonda */
+    width: 50px; /* Define a largura do botão */
+    height: 50px; /* Define a altura do botão */
+    background-color: white; /* Adiciona um fundo branco */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* Garante que os botões sejam posicionados dentro do carrossel */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta o centro exato */
+    z-index: 1; /* Garante que os botões fiquem acima do conteúdo */
+    font-size: 1.5rem; /* Tamanho das setas */
+    font-weight: bold; /* Deixa as setas em negrito */
+    color: black; /* Cor das setas */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    display: none; /* Esconde os ícones padrão do Bootstrap */
+}
+
+img {
     display: block;
-    margin: 5em;
-    width: 400px;
-    height: 400px;
+    margin: 0 auto;
+    width: 20%;
+    height: auto; /* Mantém a proporção da imagem */
 }
 
